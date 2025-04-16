@@ -78221,11 +78221,9 @@ A.xj.prototype={
 am(){return new A.Bq(A.b([B.Di,B.JJ,B.Mq,B.At,B.SN],t.p))}}
 A.Bq.prototype={
 a7r(a){this.ao(new A.aeZ(this,a))},
-L(a){var s,r=this,q=null,p=r.d,o=r.e[p],n=A.aV(4294309365),m=r.d,l=A.F8(A.hC(m===0?"assets/images/home.png":"assets/images/home_off.png",q,24,24),"Trang chu\u0309"),k=A.F8(A.hC(m===1?"assets/images/product.png":"assets/images/product_off.png",q,24,24),"Sa\u0309n ph\xe2\u0309m"),j=A.F8(A.hC(m===2?"assets/images/supplier.png":"assets/images/supplier_off.png",q,24,24),"Nha\u0300 cung c\xe2\u0301p")
-m=m===3
-s=A.F8(A.hC(m?"assets/images/chat.png":"assets/images/chat_off.png",q,24,24),"Tin nh\u0103\u0301n")
-l=A.b([l,k,j,s,A.F8(A.hC(m?"assets/images/user.png":"assets/images/user_off.png",q,24,24),"Ca\u0301 nh\xe2n")],t.ur)
-return A.oq(q,o,A.dP(q,A.iN(new A.v1(l,r.ga7q(),p,B.zb,n,24,B.HI,B.F,!0,!0,q),60,q),B.u,q,q,new A.c3(B.dK,q,q,q,q,q,B.a0),q,q,q,q,q,q,q),!1)}}
+L(a){var s=this,r=null,q=s.d,p=s.e[q],o=A.aV(4294309365),n=s.d,m=A.F8(A.hC(n===0?"assets/images/home.png":"assets/images/home_off.png",r,24,24),"Trang chu\u0309"),l=A.F8(A.hC(n===1?"assets/images/product.png":"assets/images/product_off.png",r,24,24),"Sa\u0309n ph\xe2\u0309m"),k=A.F8(A.hC(n===2?"assets/images/supplier.png":"assets/images/supplier_off.png",r,24,24),"Nha\u0300 cung c\xe2\u0301p"),j=A.F8(A.hC(n===3?"assets/images/chat.png":"assets/images/chat_off.png",r,24,24),"Tin nh\u0103\u0301n")
+m=A.b([m,l,k,j,A.F8(A.hC(n===4?"assets/images/user.png":"assets/images/user_off.png",r,24,24),"Ca\u0301 nh\xe2n")],t.ur)
+return A.oq(r,p,A.dP(r,A.iN(new A.v1(m,s.ga7q(),q,B.zb,o,24,B.HI,B.F,!0,!0,r),60,r),B.u,r,r,new A.c3(B.dK,r,r,r,r,r,B.a0),r,r,r,r,r,r,r),!1)}}
 A.aeZ.prototype={
 $0(){this.a.d=this.b},
 $S:0}

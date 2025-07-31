@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu khảo s&#225;t</title>
+        <link rel="shortcut icon" href="https://media.ump.edu.vn/Media/2_SVYDS/Images/logo-yds-325ce0a80d-7-e.png" />
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/main.css?v=194">
+    <link href="/Content/Dashboard/css/components.min.css" rel="stylesheet" />
+    <link href="/Content/Dashboard/css/profile.min.css" rel="stylesheet" />
+
+    <link href="/Content/ThemeMXH/css/tooltipster.bundle.css" rel="stylesheet" />
+
+    <link href="/Content/kendo/2016.3.1118/kendo.common.min.css?v=194" rel="stylesheet" />
+    <link href="/Content/kendo/2016.3.1118/kendo.cms.min.css?v=194" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/style.css?v=194">
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/base.css?v=194">
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/chat.css">
+    <link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/switch.css?v=194" />
+
+
+    <script type="text/javascript" src="/Content/ThemeMXH/js/jquery-3.4.1.min.js?v=194"></script>
+    <script src="/Scripts/kendo/2016.3.1118/kendo.all.min.js?v=194"></script>
+    <script src="/Scripts/kendo/2016.3.1118/kendo.timezones.min.js?v=194"></script>
+    <script src="/Scripts/kendo/2016.3.1118/kendo.aspnetmvc.min.js?v=194"></script>
+    
+
+    <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="/Scripts/toastr/css/toastr.min.css" rel="stylesheet" />
+    <script src="/Scripts/toastr/js/toastr.min.js"></script>
+    <script src="/Scripts/jquery.validate.min.js"></script>
+    <script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="/Scripts/jquery.cms.js?v=194"></script>
+    <script src="/Scripts/jquery-cms-sv.js?v=194"></script>
+
+    <link href="/Content/ThemeMXH/css/jquery-confirm.min.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-confirm.min.js"></script>
+
+</head>
+<body>
+    <input id="UID" name="UID" type="hidden" value="36" />
+    <input id="CurrentLanguage" name="CurrentLanguage" type="hidden" value="" />
+    <div id="focus-overlay"></div>
+    <div class="wrapper">
+        
+<style>
+    @keyframes bellmove {
+        from {
+            top: -8px;
+        }
+
+        to {
+            top: -5px;
+        }
+    }
+</style>
+<script type="text/javascript" src="/Scripts/lang/langSpecial.js"></script>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="/dashboard.html" title="">
+                        <img src="https://media.ump.edu.vn/Media/2_SVYDS/202109/Images/sv-487x78-06eec55f12-3-e.png" style="max-height: 40px !important;">
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="/sinh-vien-tin-tuc-thong-bao-search.html">
+                    <input type="text" id="k" name="k" langid="header-search-placeholder" placeholder="Tìm kiếm..." required>
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+
+            <div class="menu-btn">
+                <a href="#" title=""><i class="fa fa-bars"></i></a>
+            </div>
+
+
+
+                <div class="user-account dropdown">
+                    <div class="user-info" data-toggle="dropdown">
+                            <img class="user-account-img" src="/Content/images/no_avatar.svg" style="width: 30px;height: 30px;border-radius: 50% !important;object-fit: cover;" />
+                                                <i class="fa fa-caret-down user-account-name-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-account-info dropdown-menu pull-right">
+                        <ul class="us-links">
+                            <li><a href="/thong-tin-sinh-vien.html" title="">Th&#244;ng tin c&#225; nh&#226;n</a></li>
+                            <li><a title="" onclick="popupDoiMatKhau()">Đổi mật khẩu</a></li>
+                            <li><a href="/SinhVien/Logout" title="">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>          
+                <div class="menu-top">
+                    <ul>
+                        <li>
+                            <a href="/dashboard.html" title="">
+                                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                                Trang chủ
+                            </a>
+                        </li>
+
+<li>
+    <a id="spanBell" href="/sinh-vien-tin-tuc-thong-bao.html" title="">
+        <div id="tinTuc" lang="tin-tuc">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp&nbspTin tức
+        </div>
+    </a>
+</li>
+
+<script src="/Scripts/lang/lang.js"></script>
+<script>
+    CheckNews();
+    function CheckNews() {
+        if (0 > 0) {
+            var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + 0 + '</span>';
+            $("#spanBell").html(html);
+        }
+    }
+</script>
+                    </ul>
+                    <div id="accordion-menu-mb" class="accordion-menu">
+    <ul>
+                <li>
+                    <a href="javascript:void(0)" title=""><i class="fa fa-tv" aria-hidden="true"></i>TH&#212;NG TIN CHUNG</a>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/thong-tin-sinh-vien.html>Th&#244;ng tin sinh vi&#234;n</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/de-xuat-cap-nhat-thong-tin.html>Đề xuất cập nhật th&#244;ng tin</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/de-xuat-bieu-mau.html>Đề xuất biểu mẫu</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/ghi-chu-nhac-nho-sinh-vien.html>Ghi ch&#250; nhắc nhở</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/sinh-vien/danh-sach-khao-sat.html>Khảo s&#225;t sự kiện</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title=""><i class="fa fa-mortar-board" aria-hidden="true"></i>HỌC TẬP</a>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/ket-qua-hoc-tap.html>Kết quả học tập</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/lich-theo-tuan.html>Lịch theo tuần</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/lich-toan-truong.html>Lịch to&#224;n trường</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/lich-theo-tien-do.html>Lịch theo tiến độ</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title=""><i class="fa fa-check-square-o" aria-hidden="true"></i>ĐĂNG K&#221; HỌC PHẦN</a>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/chuong-trinh-khung.html>Chương tr&#236;nh khung</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/dang-ky-hoc-phan.html>Đăng k&#253; học phần</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/dang-ky-thi.html>Đăng k&#253; thi lại</a>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" title=""><i class="fa fa-cc-visa" aria-hidden="true"></i>HỌC PH&#205;</a>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/phieu-thu.html>Phiếu thu trực tuyến</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/cong-no-sinh-vien.html>Tra cứu c&#244;ng nợ</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/phieu-thu-tong-hop.html>Phiếu thu tổng hợp</a>
+                            </li>
+                        </ul>
+                        <ul class="submenu">
+                            <li>
+                                <a  href=/thanh-toan-truc-tuyen.html>Thanh to&#225;n trực tuyến</a>
+                            </li>
+                        </ul>
+                </li>
+        <li><a href="/SinhVien/Logout" title=""><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a></li>
+    </ul>
+</div>
+                </div>
+
+        </div>
+    </div>
+</header>
+<script>
+    function popupDoiMatKhau() {
+        $.ajax({
+            url: "/sinh-vien/doi-mat-khau.html",
+            type: 'GET',
+            dataType: 'html',
+            data: {
+                LoaiDangNhap: parseInt(1),
+            },
+            success: function (data) {
+                $('<div class="lightbox-backgrond" onclick="closePopup();"></div><div id="boxes" style="height: inherit !important;"><div id="dialog" class="window" style="height: inherit !important;position: fixed; width:500px; top: 40%; left: 50%; transform: translate(-50%, -50%); display: block;"><a onclick="closePopup()" class="closePopup agree"></a><div class="content" id="popup-content"></div></div></div>').appendTo(document.body);
+                $('#boxes .content').html(data);
+            },
+        });
+    }
+
+    function closePopup() {
+        $('#mask').hide();
+        $('.window').hide();
+        $('#boxes').remove();
+        $('.lightbox-backgrond').remove();
+    };
+
+    function confirmDoiMatKhau() {
+        $.ajax({
+            url: "/sinh-vien/doi-mat-khau.html",
+            type: 'POST',
+            dataType: 'html',
+            data: {
+
+            },
+            success: function () {
+                closePopup();
+                location.reload();
+            },
+        });
+    };
+
+
+    function btnSwitchNgonNgu_Click(language) {
+        var tmp = {
+            pLanguage: language
+        };
+        $.ajax({
+            type: 'POST',
+            url: '/SinhVien/CapNhatNgonNguGiaoDien',
+            data: JSON.stringify(tmp),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (msg) {
+                location.reload();
+            },
+            error: function (msg) { }
+        });
+
+        //location.href = location.href;
+    };
+
+    //function CheckNews() {
+    //    if ($("#spanBell").length > 0) {
+    //        $.ajax({
+    //            url: "/SinhVienTinTuc/CheckNews",
+    //            type: "POST",
+    //            dataType: 'json',
+    //            success: function (data) {
+    //                if (data > 0) {
+    //                    var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + data +'</span>';
+    //                    $("#spanBell").html(html);
+    //                }
+    //            }
+    //        });
+    //    }
+    //}
+</script>
+        <div class="main-content">
+            <div class="container" id="full-resize-table">
+                <div class="main-section-content" id="contnet">
+                    <div class="row">
+                        
+
+
+
+
+<div class="col-md-12 col-xs-12">
+    <div class="box-df">
+        <div class="portlet">
+            <div class="portlet-title">
+                <div class="caption">
+                            <span class="caption-subject bold">Phiếu khảo s&#225;t</span>
+                </div>
+            </div>
+            <div class="portlet-body notification">
+                        <p class="bold">C&#243; lỗi xảy ra</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="config-tool" class="closed">
+                <a id="config-tool-cog">
+                    <img src="/Content/ThemeMXH/img/icons/menu2.png" />
+                </a>
+                <div id="config-tool-options">
+                    <div class="box-df p-0">
+    <div id="accordion-menu" class="accordion-menu">
+        <ul>
+            <li>
+                <a href="/dashboard.html" title=""><i class="fa fa-home" aria-hidden="true"></i><span lang="menusinhvien-left-home">TRANG CHỦ</span></a>
+            </li>
+                        <li>
+                            <a href="javascript:void(0)" title=""><i class="fa fa-tv" aria-hidden="true"></i><span lang="groupmenu-thongtinchung">TH&#212;NG TIN CHUNG</span></a>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/thong-tin-sinh-vien.html><span lang="menusinhvien-1">Th&#244;ng tin sinh vi&#234;n</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/de-xuat-cap-nhat-thong-tin.html><span lang="menusinhvien-2">Đề xuất cập nhật th&#244;ng tin</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/de-xuat-bieu-mau.html><span lang="menusinhvien-4">Đề xuất biểu mẫu</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/ghi-chu-nhac-nho-sinh-vien.html><span lang="menusinhvien-6">Ghi ch&#250; nhắc nhở</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/sinh-vien/danh-sach-khao-sat.html><span lang="menusinhvien-37">Khảo s&#225;t sự kiện</span></a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" title=""><i class="fa fa-mortar-board" aria-hidden="true"></i><span lang="groupmenu-hoctap">HỌC TẬP</span></a>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/ket-qua-hoc-tap.html><span lang="menusinhvien-7">Kết quả học tập</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/lich-theo-tuan.html><span lang="menusinhvien-8">Lịch theo tuần</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/lich-toan-truong.html><span lang="menusinhvien-10">Lịch to&#224;n trường</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/lich-theo-tien-do.html><span lang="menusinhvien-9">Lịch theo tiến độ</span></a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" title=""><i class="fa fa-check-square-o" aria-hidden="true"></i><span lang="groupmenu-dangkyhocphan">ĐĂNG K&#221; HỌC PHẦN</span></a>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/chuong-trinh-khung.html><span lang="menusinhvien-14">Chương tr&#236;nh khung</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/dang-ky-hoc-phan.html><span lang="menusinhvien-15">Đăng k&#253; học phần</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/dang-ky-thi.html><span lang="menusinhvien-16">Đăng k&#253; thi lại</span></a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" title=""><i class="fa fa-cc-visa" aria-hidden="true"></i><span lang="groupmenu-hocphi">HỌC PH&#205;</span></a>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/phieu-thu.html><span lang="menusinhvien-25">Phiếu thu trực tuyến</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/cong-no-sinh-vien.html><span lang="menusinhvien-20">Tra cứu c&#244;ng nợ</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/phieu-thu-tong-hop.html><span lang="menusinhvien-23">Phiếu thu tổng hợp</span></a>
+                                    </li>
+                                </ul>
+                                <ul class="submenu" style="">
+                                    <li style="">
+                                        <a  href=/thanh-toan-truc-tuyen.html><span lang="menusinhvien-21">Thanh to&#225;n trực tuyến</span></a>
+                                    </li>
+                                </ul>
+                        </li>
+
+
+<script type="text/javascript">
+    function openLienKet(e) {
+        window.open($(e).attr("data-link"), '_blank');
+    }
+</script>        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var uid = $("#UID").val();
+        if (uid === "21") {
+            $('#config-tool').attr('class', '');
+        }
+        if ("False" == "True") {
+            $('#config-tool').attr('class', '');
+        }
+    })
+</script>
+<script type="text/javascript" src="/Scripts/lang/lang.js"></script>
+
+
+                    <div class="changeColor">
+                        <ul class="theme-color">
+                            <li data-style="dashboard-default" class="color-default0 current"> </li>
+                            <li data-style="dashboard-primary-color" class="color-default"> </li>
+                            <li data-style="dashboard-two-color" class="color-default1"></li>
+                            <li data-style="dashboard-three-color" class="color-default2"></li>
+                            <li data-style="dashboard-four-color" class="color-default3"></li>
+                            <li data-style="dashboard-five-color" class="color-default4"></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <script type="text/javascript" src="/Content/ThemeMXH/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/ThemeMXH/js/jquery.nicescroll.min.js"></script>
+    <script src="/Content/ThemeMXH/js/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="/Content/ThemeMXH/js/main.js"></script>
+
+
+    
+
+    
+
+</body>
+</html>
+

@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+    <title>Tra cứu văn bằng</title>
+        <link rel="shortcut icon" href="https://media.ump.edu.vn/Media/2_SVYDS/Images/logo-yds-325ce0a80d-7-e.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Content/loginnews/css/bootstrap.min.css">
+    <script src="/Content/login/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/loginnews/css/style.css?v=194">
+    <script src="/Content/loginnews/js/bootstrap.min.js"></script>
+
+    <style>
+        .callnow {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            height: 70px;
+        }
+
+        #footer-hotline {
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+
+
+   
+</head>
+<body>
+    <input id="UID" name="UID" type="hidden" value="36" />
+    <main class="wapper-login">
+        <header class="header" style="">
+                <div class="container">
+                    <div class="logo-login-main text-center">
+                            <a href="/"><img src="/Content/AConfig/images/sv_header_login.png"></a>
+                    </div>
+                </div>
+            <div style="clear:both;"></div>
+        </header>
+        <div>
+            
+
+<link href="/Scripts/toastr/css/toastr.min.css" rel="stylesheet" />
+<script src="/Scripts/toastr/js/toastr.min.js"></script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<link href="/Content/Dashboard/css/components.min.css" rel="stylesheet" />
+<link href="/Content/Dashboard/css/profile.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/base.css?v=14">
+
+
+<link href="/Content/kendo/2016.3.1118/kendo.common.min.css?v=14" rel="stylesheet" />
+<link href="/Content/kendo/2016.3.1118/kendo.cms.min.css?v=14" rel="stylesheet" />
+
+<script src="/Scripts/kendo/2016.3.1118/kendo.all.min.js?v=14"></script>
+<script src="/Scripts/kendo/2016.3.1118/kendo.timezones.min.js?v=14"></script>
+<script src="/Scripts/kendo/2016.3.1118/kendo.aspnetmvc.min.js?v=14"></script>
+
+<style>
+    .k-dropdown-wrap .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input {
+        height: 32px !important;
+    }
+
+    .k-state-default > .k-select {
+        border-color: #cccccc !important;
+        background: #fff !important;
+    }
+
+    .k-autocomplete.k-state-default, .k-picker-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-dropdown-wrap.k-state-default {
+        border-color: #cccccc !important;
+    }
+</style>
+
+<script>
+    function addtionalDataDM(name) {
+        return {
+            NameDanhMuc: name,
+        }
+    }
+</script>
+
+<section class="breadcrumb-title">
+    <div class="container">
+        <strong><span></span>Tra cứu văn bằng</strong>
+    </div>
+</section>
+
+<section class="section-tracuu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    <div class="box-df">
+                        <div class="search-adv">
+<form action="/tra-cuu-van-bang.html?Length=14" class="form-contact" data-ajax="true" data-ajax-failure="OnFailureTraCuuVanBang" data-ajax-method="POST" data-ajax-success="OnSuccessTraCuuVanBang" id="form0" method="post"><input name="__RequestVerificationToken" type="hidden" value="QidByFJv8ligRaYvjeU6nAP94WPALTnQxSh-dskLr96OqyB5sB4o7a9BEa8BSvQzqbZgGweXfgKBov4__SOV7z6xBUQXhTpjscBx4bURHQE1" />                                <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group align-items-center">
+<label class="title col-form-label required" for="H__t_n">Họ t&#234;n</label><input class="form-control" id="HoTen" name="HoTen" type="text" value="" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group align-items-center">
+<label class="title col-form-label required" for="Ng_y_sinh">Ng&#224;y sinh</label><input class="form-control" id="NgaySinh" name="NgaySinh" placeholder="Chọn ngày" style="width:100%;" type="text" /><script>
+	jQuery(function(){jQuery("#NgaySinh").kendoDatePicker({"format":"dd/MM/yyyy","min":new Date(1900,0,1,0,0,0,0),"max":new Date(2099,11,31,0,0,0,0)});});
+</script>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group align-items-center">
+<label class="title col-form-label required" for="S__hi_u_v_n_b_ng">Số hiệu văn bằng</label><input class="form-control" id="SoHieuVanBang" name="SoHieuVanBang" type="text" value="" />
+                                            </div>
+                                        </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group align-items-center">
+                                            <label for="" class="title col-form-label">Mã bảo vệ</label>
+                                            <div class="form-group-wrap">
+                                                <div class="box-captcha"><style>.box-captcha{position:relative;height:37px}.box-captcha br{display:none}.box-captcha img{height:37px;position:absolute;top:0;left:160px}.box-captcha input{height:37px;position:absolute;left:0;top:0;width:125px;text-align:center}.box-captcha a{position:absolute;background:url(/Content/images/refresh.png) no-repeat;left:129px;top:7px;height:24px;width:24px;cursor:pointer;text-indent:-99965px;display:inherit!important}</style><div class="captchaContainer_5f7a5"><img border="0" class=" captcha-input imgcaptcha_5f7a5" float="left" href="javascript:void(0)" id="newcaptcha" src="/WebCommon/GetCaptcha" style="padding-right: 5px; max-height: 35px" /></div><input class="captcha-input txtcaptcha_5f7a5" id="Captcha" name="Captcha" placeholder="Nhập mã" type="text" /><a href="javascript:void(0)" class="captcharefresh refreshNewCaptcha_5f7a5">Chọn mã khác</a><script>$(function(){$('.refreshNewCaptcha_5f7a5').click(function(e){var a=$('.imgcaptcha_5f7a5'),n=a.attr('src');n=n.replace(/(.*?)\?r=\d+\.\d+$/,'$1'),'undefined'!=typeof console&&console.log(n);var c=new Image;$(c).load(function(){a.prev('.captchaContainer_5f7a5').empty().append(c)}),$('.imgcaptcha_5f7a5').attr('src',n+'?r='+Math.random()),e.preventDefault()})});</script></div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center align-items-center">
+                                    <div class="form-group-wrap">
+                                        <button class="btn-custom"><img style="vertical-align: middle; margin-right: 3px;" src="/Content/loginnews/images/search.png" />Tra cứu</button>
+                                    </div>
+                                </div>
+                                    <div style="color:red;font-size:13px">
+                                        <span>
+                                            Điều kiện tra cứu: (Họ t&#234;n + Ng&#224;y sinh) hoặc (Số hiệu văn bằng)
+                                        </span>
+                                    </div>
+</form>                        </div>
+                    </div>
+
+            </div>
+            
+        </div>
+        <div class="box_ketquatracuu" id="box_ketquatracuu"></div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    function OnSuccessTraCuuVanBang(data) {
+        $('#box_ketquatracuu').html('');
+        toastr.clear();
+        toastr.remove();
+        var t = "";
+        if (data.Errors != undefined && (data.Errors || data.errors)) {
+            var a = void 0 == data.Errors ? data.errors : data.Errors;
+            a && ($.each(a, function (data, a) {
+                "errors" in a && $.each(a.errors, function () {
+                    t += this + "<br/>"
+                })
+            }), t = t.substr(0, t.lastIndexOf("<br/>")))
+        }
+        if (t != null && t != "") {
+            toastr.warning(t);
+            $('.captcharefresh').click();
+        } else {
+            $('.captcharefresh').click();
+            //toastr.success('');
+            $('#box_ketquatracuu').html(data);
+        }
+    }
+    function OnFailureTraCuuVanBang() {
+
+    }
+</script>
+        </div>
+    </main>
+
+    
+
+</body>
+</html>

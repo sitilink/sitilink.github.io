@@ -1,0 +1,187 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0">
+    <title>Tra cứu th&#244;ng tin</title>
+        <link rel="shortcut icon" href="https://media.ump.edu.vn/Media/2_SVYDS/Images/logo-yds-325ce0a80d-7-e.png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/Content/loginnews/css/bootstrap.min.css">
+    <script src="/Content/login/js/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Content/loginnews/css/style.css?v=194">
+    <script src="/Content/loginnews/js/bootstrap.min.js"></script>
+
+    <style>
+        .callnow {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            height: 70px;
+        }
+
+        #footer-hotline {
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+
+
+   
+</head>
+<body>
+    <input id="UID" name="UID" type="hidden" value="36" />
+    <main class="wapper-login">
+        <header class="header" style="">
+                <div class="container">
+                    <div class="logo-login-main text-center">
+                            <a href="/"><img src="/Content/AConfig/images/sv_header_login.png"></a>
+                    </div>
+                </div>
+            <div style="clear:both;"></div>
+        </header>
+        <div>
+            
+<link href="/Scripts/toastr/css/toastr.min.css" rel="stylesheet" />
+<script src="/Scripts/toastr/js/toastr.min.js"></script>
+<script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="/Scripts/jquery.validate.min.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<link href="/Content/Dashboard/css/components.min.css" rel="stylesheet" />
+<link href="/Content/Dashboard/css/profile.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/Content/ThemeMXH/css/base.css?v=14">
+<section class="breadcrumb-title">
+    <div class="container">
+        <strong><span></span>Tra cứu thông tin</strong>
+    </div>
+</section>
+
+<section class="section-tracuu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box-df">
+<form action="/tra-cuu-thong-tin.html?Length=14" class="form-contact" data-ajax="true" data-ajax-failure="OnFailureTraCuuThongTin" data-ajax-method="POST" data-ajax-success="OnSuccessTraCuuThongTin" id="form0" method="post"><input name="__RequestVerificationToken" type="hidden" value="qxLsT_ZWmDvPAgQjCFM5ZqUgc1n20_BlQyp0oqK5ahZHMByj5SAw9sdVIZU_LPm4yij4L4v4FFhGP5WqWdC23VTHBdqah_5q7q1rByEW0a01" />                        <div class="search-adv">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group align-items-center">
+                                        <label for="" class="title col-form-label">
+                                            Mã số sinh viên
+                                        </label>
+                                        <div class="form-group-wrap">
+                                            <input class="form-control" id="MaSinhVien" name="MaSinhVien" placeholder="Nhập mã sinh viên." type="text" value="" />
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group align-items-center">
+                                            <label for="" class="title col-form-label">
+                                                Họ tên
+                                            </label>
+                                            <div class="form-group-wrap">
+                                                <input class="form-control" id="HoTen" name="HoTen" placeholder="Nhập họ và tên." type="text" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group align-items-center">
+                                            <label for="" class="title col-form-label">
+                                                Ngày sinh
+                                            </label>
+                                            <div class="form-group-wrap">
+                                                <input class="form-control" id="NgaySinh" name="NgaySinh" placeholder="VD: 01/01/1998" type="text" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                        <div class="col-sm-4">
+                                            <div class="form-group align-items-center div_ghichu">
+                                                <label for="" class="title col-form-label">
+                                                    Mã lớp
+                                                </label>
+                                                <div class="form-group-wrap">
+                                                    <input class="form-control" id="LopHoc" name="LopHoc" placeholder="Nhập mã lớp." type="text" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group align-items-center div_ghichu">
+                                            <label for="" class="title col-form-label">
+                                                Số CCCD
+                                            </label>
+                                            <div class="form-group-wrap">
+                                                <input class="form-control" id="SoCMND" name="SoCMND" placeholder="Nhập số CCCD." type="text" value="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group align-items-center">
+                                        <label for="" class="title col-form-label">
+                                            Mã bảo vệ
+                                        </label>
+                                        <div class="form-group-wrap">
+                                            <div class="box-captcha"><style>.box-captcha{position:relative;height:37px}.box-captcha br{display:none}.box-captcha img{height:37px;position:absolute;top:0;left:160px}.box-captcha input{height:37px;position:absolute;left:0;top:0;width:125px;text-align:center}.box-captcha a{position:absolute;background:url(/Content/images/refresh.png) no-repeat;left:129px;top:7px;height:24px;width:24px;cursor:pointer;text-indent:-99965px;display:inherit!important}</style><div class="captchaContainer_b1382"><img border="0" class=" captcha-input imgcaptcha_b1382" float="left" href="javascript:void(0)" id="newcaptcha" src="/WebCommon/GetCaptcha" style="padding-right: 5px; max-height: 35px" /></div><input class="captcha-input txtcaptcha_b1382" id="Captcha" name="Captcha" placeholder="Nhập mã" type="text" /><a href="javascript:void(0)" class="captcharefresh refreshNewCaptcha_b1382">Chọn mã khác</a><script>$(function(){$('.refreshNewCaptcha_b1382').click(function(e){var a=$('.imgcaptcha_b1382'),n=a.attr('src');n=n.replace(/(.*?)\?r=\d+\.\d+$/,'$1'),'undefined'!=typeof console&&console.log(n);var c=new Image;$(c).load(function(){a.prev('.captchaContainer_b1382').empty().append(c)}),$('.imgcaptcha_b1382').attr('src',n+'?r='+Math.random()),e.preventDefault()})});</script></div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center align-items-center">
+                                <div class="form-group-wrap">
+                                    <button class="btn-custom"><img style="vertical-align: middle; margin-right: 3px;" src="/Content/loginnews/images/search.png" />Tra cứu</button>
+                                </div>
+                            </div>
+                        </div>
+</form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="box_ketquatracuu" id="box_ketquatracuu"></div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+    function OnSuccessTraCuuThongTin(data) {
+        $('#box_ketquatracuu').html('');
+        toastr.clear();
+        toastr.remove();
+        var t = "";
+
+        if (data.Errors != undefined && (data.Errors || data.errors)) {
+            var a = void 0 == data.Errors ? data.errors : data.Errors;
+            a && ($.each(a, function (data, a) {
+                "errors" in a && $.each(a.errors, function () {
+                    t += this + "<br/>"
+                })
+            }), t = t.substr(0, t.lastIndexOf("<br/>")))
+        }
+        if (t != null && t != "") {
+            toastr.warning(t);
+            $('.captcharefresh').click();
+        } else {
+
+            $('.captcharefresh').click();
+            $('#box_ketquatracuu').html(data).promise().done(function () {
+                $(".DTFC_LeftWrapper").html("");
+                $(".dataTables_scrollHeadInner").css("width", "100%");
+                $(".dataTable").css("width", "100%");
+                $(".dataTables_scrollBody").css("width", "100%");
+                setTimeout(function () { $(window).resize(); }, 0);
+            });
+
+        }
+    }
+    function OnFailureTraCuuThongTin() {
+
+    }
+</script>
+        </div>
+    </main>
+
+    
+
+</body>
+</html>
